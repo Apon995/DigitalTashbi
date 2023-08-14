@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Tasbhi</title>
+    <!-- ---roboto-fonts-link -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- --daysiul-cdn-link--- -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ---ionicons-cdn--- -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="font-['Roboto']  dark:bg-white h-auto">
+    <!-- --header-section-- -->
+    <header class=" bg-slate-300">
+        <nav class="flex justify-between items-center px-[4%] py-2 md:static relative">
+            <img src="./assets/allah.png" alt="" class="w-[60px]">
+            <div class="">
+                <ion-icon name="menu" onclick="toggleNav(this)" class="md:hidden block text-3xl text-black cursor-pointer "></ion-icon>
+                <ul class="flex md:flex-row items-center flex-col gap-2 md:text-gray-700 font-medium text-base md:static absolute md:bg-inherit bg-slate-300 text-black top-[90%] left-0 bottom-0 w-full h-fit py-5 opacity-0 duration-100 z-10 md:opacity-100 ">
+                    <li><a href=""
+                            class="hover:text-red-400  hover:border-b-4 hover:border-[#adadad] duration-200">Home</a>
+                    </li>
+                    <li><a href=""
+                            class="hover:text-red-400  hover:border-b-4 hover:border-[#adadad] duration-200">HolyQuran</a>
+                    </li>
+                    <li><a href=""
+                            class="hover:text-red-400  hover:border-b-4 hover:border-[#adadad] duration-200">Namaz</a>
+                    </li>
+                    <li><a href=""
+                            class="hover:text-red-400  hover:border-b-4 hover:border-[#adadad] duration-200">Hajj</a>
+                    </li>
+                    <li><a href=""
+                            class="hover:text-red-400  hover:border-b-4 hover:border-[#adadad] duration-200">Risalat</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+    </header>
+    <!-- --main-section-- -->
+    <main class="py-16 w-full px-[4%] lg:px-[10%]  ">
+        <div class="flex justify-center flex-col items-center gap-y-8 flex-wrap ">
+            <div class="flex text-center gap-x-4 md:gap-y-4 gap-y-5 flex-wrap md:flex-row flex-col">
+                <div class="shadow-lg bg-slate-300 py-4 px-12 space-y-4 rounded-lg">
+                    <h1 class="text-2xl text-gray-800">Sub-han_allah &#128151</h1>
+                    <p class="text-2xl text-gray-700 " id="subhan_allahValue">0</p>
+                    <div class="md:space-x-2 space-y-3 space-x-1">
+                        <button class="btn btn-primary " id="subhan_allahCountbtn" >count Up</button>
+                        <button class="btn btn-info" id="subhan_allahDownbtn">count down</button>
+                    </div>
+                </div>
+
+                <div class="shadow-lg bg-slate-300 py-4 px-12 space-y-4 rounded-lg">
+                    <h1 class="text-2xl text-gray-800">Alhum_dulilaah &#128522</h1>
+                    <p class="text-2xl text-gray-700 " id="Alhum_dulilaahValue">0</p>
+                    <div class="md:space-x-2 space-y-2">
+                        <button class="btn btn-primary " id="Alhum_dulilaahCountbtn">count Up</button>
+                        <button class="btn btn-info" id="Alhum_dulilaahDownbtn">count down</button>
+                    </div>
+                </div>
+
+
+                <div class="shadow-lg bg-slate-300 py-4 px-12 space-y-4 rounded-lg">
+                    <h1 class="text-2xl text-gray-800">Allahu_akbar &#128525</h1>
+                    <p class="text-2xl text-gray-700 " id="Allahu_akbarValue">0</p>
+                    <div class="md:space-x-2 space-y-2">
+                        <button class="btn btn-primary" id="Allahu_akbarCountbtn">count Up</button>
+                        <button class="btn btn-info" id="Allahu_akbarDownbtn">count down</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-end ">
+                <div class=" bg-primary text-primary-content md:py-4 py-0 md:px-12 px-8 space-y-4 rounded-lg">
+                    <div class="card-body text-center ">
+                     <p>subhan_allah say = <span id="subhan-allah-value">0</span></p>
+                     <p>Alhum_dulilaah say = <span id="alhamduliaah-value">0</span></p>
+                     <p>Allahu_akbar say = <span id="allahuakbar-value">0</span></p>
+    
+                     <h1>Toal count = <span id="total">0</span></h1>
+                   
+                    </div>
+                  </div>
+            </div>
+
+            <div class="text-center ">
+                <button class="btn btn-secondary btn-xl" onclick="resetAll()">Reset All</button>
+            </div>
+        </div>
+       
+       
+
+        
+    </main>
+    <!-- --footer-section-- -->
+
+    <footer class="py-5 bg-white md:px-0 px-[4%] ">
+        <div class="text-center flex-wrap">
+
+            <p class="text-base text-[#adadad]">Copyright by Team midgen &copy; 2023 - All right reserved</p>
+        </div>
+
+    </footer>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
